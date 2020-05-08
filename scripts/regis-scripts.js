@@ -11,3 +11,12 @@ $(document).ready(function(){
   });
 
 });
+
+function auto () { 
+	document.getElementById('Register').style.display = 'none'; 
+	document.getElementById('Avtorise').style.display = 'block'; 
+} 
+function reg(){ 
+	document.getElementById('Avtorise').style.display = 'none'; 
+	document.getElementById('Register').style.display = 'block'; 
+} 
