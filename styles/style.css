@@ -1,0 +1,77 @@
+*{
+	font-family: 'Press Start 2P', cursive;
+}
+body{
+  	background: url('../images/background-body-01.png') #FED6BC;
+   	animation: moving 2s linear infinite;
+    width: 100%;
+  	height: 100%;
+  	overflow: hidden;
+}
+@keyframes moving {
+  from { background-position:0 0;}
+  to { background-position:-250px 250px } 
+}
+.MainText{
+padding:145px 
+}
+.menu{
+	background-color: black;
+	
+
+}
+.list{
+	margin-top: 50px;
+	
+}
+
+a, A:active, A:visited, A:hover {
+	color: #feda4a;
+}
+
+.star-wars {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 1900px;
+  color: #feda4a;
+  font-size: 300%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 600px;
+  text-align: justify;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  width: 80%;
+  left: 10%;
+}
+
+.crawl {
+  position: relative;
+  top: 99999px;
+  transform-origin: 50% 100%;
+  animation: crawl 120s linear;
+  text-shadow: 6px 6px black;
+}
+
+.crawl > .title {
+  font-size: 90%;
+  text-align: center;
+}
+
+.crawl > .title h1 {
+  margin: 0 0 100px;
+  text-transform: uppercase;
+}
+
+@keyframes crawl {
+    0% {
+    top: -100px;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+    100% { 
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
