@@ -12,11 +12,11 @@ $(document).ready(function(){
 
 });
 
-function auto () { 
-	document.getElementById('Register').style.display = 'none'; 
-	document.getElementById('Avtorise').style.display = 'block'; 
+function enter () { 
+	document.getElementById('register-window').style.display = 'none'; 
+	document.getElementById('enter-window').style.display = 'block'; 
 } 
 function reg(){ 
-	document.getElementById('Avtorise').style.display = 'none'; 
-	document.getElementById('Register').style.display = 'block'; 
+	document.getElementById('enter-window').style.display = 'none'; 
+	document.getElementById('register-window').style.display = 'block'; 
 } 
