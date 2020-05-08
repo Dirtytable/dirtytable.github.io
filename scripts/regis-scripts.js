@@ -12,7 +12,7 @@ $(document).ready(function(){
 
 });
 
-function enter () { 
+function enter() { 
 	document.getElementById('register-window').style.display = 'none'; 
 	document.getElementById('enter-window').style.display = 'block'; 
 } 
