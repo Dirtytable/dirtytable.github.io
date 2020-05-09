@@ -36,7 +36,7 @@ a, A:active, A:visited, A:hover {
   left: 10%;
   top: 140px;
   height: 200px;
-  background-image: linear-gradient(to top, rgba(0,0,0, 0), rgba(0,0,0,1) 50%);
+  background-image: linear-gradient(to top, rgba(0,0,0, 0), rgba(0,0,0,1) 65%);
   z-index: 10;
 }
 
