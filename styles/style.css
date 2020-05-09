@@ -2,15 +2,15 @@
 	font-family: 'Press Start 2P', cursive;
 }
 body{
-  	background: url('../images/background-body-01.png') #FED6BC;
-   	animation: moving 2s linear infinite;
+  	background: url('../images/space-pixel.png') repeat-x  0 100% fixed;
+   	animation: moving 25s linear infinite;
     width: 100%;
   	height: 100%;
   	overflow: hidden;
 }
 @keyframes moving {
-  from { background-position:0 0;}
-  to { background-position:-250px 250px } 
+ from { background-position: -1000px 100%, 0 0;}
+  to { background-position: 0 100%; }
 }
 .MainText{
 padding:145px 
