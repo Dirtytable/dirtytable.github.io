@@ -7,12 +7,12 @@
   letter-spacing: 6px;
 }
 body {
-  background: url('../images/background-body-01.png');
+  background: url('../images/stamp.png');
   animation: moving 2s linear infinite;
 }
 @keyframes moving {
   from { background-position:0 0;}
-  to { background-position:-250px 250px }
+  to { background-position:-300px 150px }
 }
 .menu{
   background-color: black;
