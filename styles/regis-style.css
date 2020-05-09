@@ -8,7 +8,7 @@
 }
 body {
   background: url('../images/stamp.png');
-  animation: moving 2s linear infinite;
+  animation: moving 4s linear infinite;
 }
 @keyframes moving {
   from { background-position:0 0;}
