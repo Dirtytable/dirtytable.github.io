@@ -31,25 +31,25 @@ a, A:active, A:visited, A:hover {
 }
 
 .end-of-text{
-  position: absolute;
+  
   width: 100%;
-  top: 140px;
+  
   height: 200px;
-  background-image: linear-gradient(to top, rgba(0,0,0, 0), rgba(0,0,0,1) 65%);
-  z-index: 10;
+  background-image: linear-gradient(to top, rgba(0,0,0, 0), rgba(0,0,0,1) 85%);
+ 
 }
 
 .star-wars {
   display: flex;
   justify-content: center;
   position: relative;
-  height: 1950px;
+  height: 1450px;
   color: #feda4a;
   font-size: 300%;
   font-weight: 600;
   letter-spacing: 6px;
   line-height: 150%;
-  perspective: 600px;
+  perspective: 550px;
   text-align: justify;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -1;
