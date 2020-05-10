@@ -1,0 +1,14 @@
+body{
+	background: url(../images/horrorterror.jpg) repeat-x bottom center fixed, 
+	linear-gradient(to bottom, rgba(255,255,255, 0), rgba(42,38,63,1) 30%) fixed;
+	
+}
+.menu{
+	background-color: black;
+	
+
+}
+.list{
+	margin-top: 50px;
+	
+}
