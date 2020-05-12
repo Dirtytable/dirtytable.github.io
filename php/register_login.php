@@ -18,15 +18,17 @@
 		$link = $GLOBALS['link'] = mysqli_connect('localhost', 'root', '', 'user-accounts');
 		if ( !$link ) die ("Невозможно подключение к MySQL");
 		$GLOBALS['link'] = mysqli_connect('localhost', 'root', '', 'user-accounts') or die ("Can't open $db");
-		$query = "INSERT INTO users VALUES ('"
-		    .$name."', '".$password."')";
+		$query = "INSERT INTO users VALUES ('".$name."', '".$password."')";
 		$result =   mysqli_query($GLOBALS['link'],$query );
 		if ($result) {
 			echo "<script>alert('Вы создали аккаунт' )</script>";
-          	echo "<script>document.location.href='../main.html'</script>";
+          	echo "<script>document.location.href='http://localhost/denwer/web-tzi18-09r-koshkin-asset/site/php/main.php?name=$name'</script>";
       	}
 		
 	}
+	echo "<script>alert('Ошибка регистрации. Никнейм уже занят' )</script>";
+	echo "<script>document.location.href='../register.html'</script>";
+
 ?>
 </body>
 </html>

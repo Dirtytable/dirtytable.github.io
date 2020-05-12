@@ -17,17 +17,13 @@
     $user = "SELECT * FROM `users` WHERE `name` = '$_POST[name]'";
     $quer =   mysqli_query($GLOBALS['link'], $user );
       while($row = $quer -> fetch_assoc()){
-        
-
         if($row['password'] == $_POST['password']){
           echo "<script>alert('Вы авторизованы' )</script>";
-          echo "<script>document.location.href='../main.html'</script>";
-        
+          echo "<script>document.location.href='http://localhost/denwer/web-tzi18-09r-koshkin-asset/site/php/main.php?name=$_POST[name]'</script>";
         }
         else{
           echo "<script>alert('Пароль или Никнейм введён неправильно')</script>";
           echo "<script>document.location.href='../enter.html'</script>";
-         
         }   
       }
   } else {

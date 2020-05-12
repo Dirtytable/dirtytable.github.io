@@ -64,6 +64,7 @@ a, A:active, A:visited, A:hover {
   transform-origin: 50% 100%;
   animation: crawl 120s linear infinite;
   text-shadow: 6px 6px black;
+  line-height: 1.5;
 }
 
 .crawl > .title {
