@@ -2,10 +2,7 @@
   font-family: myFirstFont;
   src: url(Agit-Prop.ttf);
 }
-*{
-  font-family: myFirstFont;
-  letter-spacing: 6px;
-}
+
 body {
   background: url('../images/stamp.png');
   animation: moving 4s linear infinite;
@@ -40,6 +37,7 @@ label {
   letter-spacing: 1px;
   color: rgb(0,0,0);
   transition: ease .3s;
+  font-family: myFirstFont;
 }
 .input {
   width: 100%;
@@ -74,7 +72,6 @@ label {
 .label-active {
   top: -3em;
 }
-
 button {
   display: inline-block;
   padding: 12px 24px;
@@ -86,9 +83,12 @@ button {
   border-radius: 3px;
   cursor: pointer;
   transition: ease .3s;
+  font-family: myFirstFont;
+  letter-spacing: 6px;
 }
 
 button:hover {
   background: rgb(82, 112, 27);
   color: #ffffff;
+  font-family: myFirstFont;
 }
