@@ -5,9 +5,9 @@
 	<title>Главная страница</title>
 	<link rel="stylesheet" type="text/css" href="../styles/main-style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-
 	<?php
 		$name = $_GET ['name'];
 		$db = "user-accounts";
@@ -17,8 +17,6 @@
 		$user = "SELECT * FROM `users` WHERE `name` = '$name'";
    		$quer =   mysqli_query($GLOBALS['link'], $user );
 		$row = $quer -> fetch_assoc();
-		
-		
 	?>
 
 	<section class="menu">
@@ -34,22 +32,30 @@
 		      <div class="list">
 		        <div class="row">
 		          <div class="col">
-		          	<p>Никнейм:
-		            <?php 
-		            echo $row['name'];
-		            ?>
-		            </p> 
-		            <p>
-		            Пароль:
-		            <?php 
-		            echo $row['password'];
-		            ?>
-		            </p>
+		          	<h4>
+		          		<p class ="badge badge-primary">Никнейм:
+			            <?php 
+			            echo $row['name'];
+			            ?>
+			            </p> 
+			            <p class="badge badge-primary">
+			            Пароль:
+			            <?php 
+			            echo $row['password'];
+			            ?>
+			            </p>
+		        	</h4>
 		          </div>
-		          <div class="col">
-		          	<a href="http://localhost/denwer/web-tzi18-09r-koshkin-asset/site/php/new-password.php?name=<?php $row['name'] ?>" class="btn btn-info"> Поменять пароль</a>
-		          	<a href="http://localhost/denwer/web-tzi18-09r-koshkin-asset/site/php/delate.php?name=<?php $row['name'] ?>" class="btn btn-danger"> Удалить аккаунт</a>
-		          </div>
+		          	<div class="col">
+		          	<form action="http://localhost/denwer/web-tzi18-09r-koshkin-asset/site/php/new-password.php?name=<?php echo $row['name'] ?>" method="post">
+		          	<input minlength ="1" name="password" type="text" class="input">
+		          	<button type="submit" class="btn btn-info">Заменить пароль</button>
+		          	</form>
+		          	</div>
+	          		
+	          		<div class="col">
+		          	<a href="http://localhost/denwer/web-tzi18-09r-koshkin-asset/site/php/delate.php?name=<?php echo $row['name'] ?>" class="btn btn-danger"> Удалить аккаунт</a>
+		          	</div>
 		        </div>
 		      </div>
 		    </div>
