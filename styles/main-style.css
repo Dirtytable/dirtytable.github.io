@@ -1,15 +1,70 @@
 body{
-	background: url(../images/horrorterror.jpg) no-repeat bottom center fixed, 
-	linear-gradient(to bottom, rgba(255,255,255, 0), rgba(42,38,63,1) 30%) fixed;
-	
+	background: url(../images/horrorterror.jpg) no-repeat bottom center , 
+	linear-gradient(to bottom, rgba(100,154,200, 0), rgba(100,154,200,1) 45%) ;
+	margin: 0;
 }
 *{
-	font-family: 'Press Start 2P', cursive;
+	box-sizing: border-box;
+	
 }
 .menu{
-	background-color: #DEF7FE;
+	background-color: black;
 }
 .list{
 	margin-top: 50px;
+}
+p{
+	text-align: justify;
+}
+.main-block{
 	
+	margin-left: 15%;
+	margin-top: 5%;
+	width: 70%;
+	
+}
+.homestuck{
+	font-family: 'courier new', cursive;
+	background-color: rgba(256,256,256,0.5);
+	padding: 5%;
+	color: black;
+}
+.star-wars{
+	background: url(../images/space.jpg);
+	background-color: rgba(0,0,0,1);
+	font-family: 'Pathway Gothic One', sans-serif;
+	color: #feda4a;
+	padding: 5%;
+}
+.star-wars p{
+	background: black;
+}
+.disc-world{
+	padding: 5%;
+	background-color: #C3FBD8;
+}
+.dnd{
+	padding: 5%;
+	background-color: #FED6BC;
+}
+.bebey{
+	padding: 5%;
+	background-color: #DEF7FE;
+}
+.container-card{
+	display: flex;
+	height: 100vh;
+	justify-content: space-around;
+	align-items: center;
+}
+.carda{
+	perspective: 1000px;
+	transform-style: preserve-3d;
+}
+.card-item{
+	
+	width: 50vh;
+	height: 50vh;
+	transition: transform 0.2s;
+
 }

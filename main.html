@@ -5,31 +5,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="viewport" content="width-device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Главная страница</title>
-	<link rel="stylesheet" type="text/css" href="../styles/main-style.css">
+	<title>Асет Кошкын</title>
+	<link rel="stylesheet" type="text/css" href="styles/main-style.css">
 	<link rel="stylesheet" href="bootstrap-4.3.1-dist\css\bootstrap.min.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
- 	 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+ 
 </head>
 <body>
-	<?php
-		$name = $_GET ['name'];
-		$db = "user-accounts";
-		$link = $GLOBALS['link'] = mysqli_connect('localhost', 'root', '', 'user-accounts');
-		if ( !$link ) die ("Невозможно подключение к MySQL");
-		$GLOBALS['link'] = mysqli_connect('localhost', 'root', '', 'user-accounts') or die ("Can't open $db");
-		$user = "SELECT * FROM `users` WHERE `name` = '$name'";
-   		$quer =   mysqli_query($GLOBALS['link'], $user );
-		$row = $quer -> fetch_assoc();
-	?>
-
 	<section class="menu">
 		<div class="container-fluid">
 		  <div class="row">
 		    <div class="сol">
 		      <div class="logo">
-		        <img   src="../images\logo.png" onmouseout="this.src='../images/logo.png'" onmouseover="this.src='../images/logo2.png'">
+		        <img   src="images\logo.png" onmouseout="this.src='images/logo.png'" onmouseover="this.src='images/logo2.png'">
 		      </div>
 		    </div>  
 		          
@@ -37,37 +26,26 @@
 		      <div class="list">
 		        <div class="row">
 		          <div class="col">
-		          	<h4>
-		          		<p class ="badge badge-primary">Никнейм:
-			            <?php 
-			            echo $row['name'];
-			            ?>
-			            </p> 
-			            <p class="badge badge-primary">
-			            Пароль:
-			            <?php 
-			            echo $row['password'];
-			            ?>
-			            </p>
-		        	</h4>
+		            <audio autoplay controls="" loop="">
+				        <source src="audios\sound-intro.mp3">
+					</audio>
 		          </div>
-		          	<div class="col">
-		          	<form action="http://localhost/denwer/web-tzi18-09r-koshkin-asset/site/php/new-password.php?name=<?php echo $row['name'] ?>" method="post">
-		          	<input minlength ="1" name="password" type="text" class="input">
-		          	<button type="submit" class="btn btn-info">Заменить пароль</button>
-		          	</form>
-		          	</div>
-	          		
-	          		<div class="col">
-		          	<a href="http://localhost/denwer/web-tzi18-09r-koshkin-asset/site/php/delate.php?name=<?php echo $row['name'] ?>" class="btn btn-danger"> Удалить аккаунт</a>
-		          	</div>
+		          <div class="col">
+		            <a href="register.html">Создать</a>
+		          </div>
+		          <div class="col">
+		            <a href="enter.html">Войти</a>
+		          </div>
+		          <div class="col">
+		            <a href="main.html">вступление</a>
+		          </div>
 		        </div>
 		      </div>
 		    </div>
 		  </div>
 		</div>
 	</section>
-
+	
 	<div class="main-block">
 
 		<div class="star-wars">
@@ -75,109 +53,18 @@
 			<div class="container-card">
 		    	<div class="carda">
 		    		<div class="card-item">
-		    		 	<img src="../images/star-wars.jpg" class="img-fluid" alt="Responsive image">
+		    		 	<img src="images/star-wars.jpg" width="640px" height="360px">
 		    		</div>
 		    	</div>
     		</div>
 			<p>
-			Существуют 3 трилогии Звездных Войн : Оригинал, приквел и сиквел. И если существование сиквелов, можно забыть, как страшный сон, то приквелы имеют важную роль в трилогиях. Этакий Джекилл и Хайд в в звездных воинах. Важность явялется требование самого автора Джорджа Лукаса после оканчания оригинальной трилогии. Он дал разрешение создания сторонних работ по звездным воинам, но при двух условиях: во-первых, Палпатин канонично мертв и не может вернуться; во-вторых, право создания приквелов остается только ему. То есть приквелы изначально находились в плане Лукаса для продолжения. Приквелы ответили на главные вопросы из оригинала: как Палпатин создал Империю; как появился Дарт Вейдер; кем были ситхи и джедаи; что такое Сила; что было до оригинала. А также они дополнили звездные воины новыми историями и ЛОРом для создания новых работ.
-			Не всем понравилось новая трилогия. Они считали, что новая трилогия опровдало их ожидание и рушила изнчальные каноны. Например, медихлориан. Он объяснал проявлении Силы. Чем больше его, тем больше Силы. И это рушило идею, что великими джедаями становиться тренированные телом и духом. Но всё это затмевает главную суть приквелов. 3 эпизод.
-			3 эпизод явялется кульминцией все трилогии. И она справлилось отлично. Эпизод наполнен самыми важными моментами в звездных войнах. Каждая фраза вложена в книгу золотых цитат. И эпизод производит столько мемов. Как часть фильма он слабый, но как конец трилогии он сильный. Проспонсировано сабредитом <a href="https://www.reddit.com/r/PrequelMemes/">Prequel Memes</a>                  
-			</p>
-		</div>
-
-		<div class="disc-world">
-			<center><p><b><h1> DISCWORLD! </h1></b></center>
-			<div class="container-card">
-		    	<div class="carda">
-		    		<div class="card-item">
-		    		 	<img src="../images\disc-1.jpg" class="img-fluid" alt="Responsive image">
-		    		</div>
-		    	</div>
-    		</div>
-
-			<p align="justify" style="font-family: Times New Roman">
-				Плоский мир! Это цикл книг Террита Пратчетта. Мир полной интересных историй, от которых всегда удивляешься.   
-				Моя любимая черта у Пратчетта в романах: если он описывает лютую дичь и абсурд, то скорее всего речь идёт о совершенно реальном факте из истории Великобритании.
-				А на этом основаны все его книги. У Терри Пратчетта особый стиль историй : все они являются сатирой и иронией реального мира.
-				Его мир - это чудаковатая отсылка нашей жизни. Но там свои законы и эти законы заставлет плоскому миру трещать по швам.
-				Ещё его у него запоминающие персонажи: трусливый валшебник Ринсвид, хитроумный арканцлер Витинарий, любознательный Смерть и его мылый помощник Смерть Крыс,
-				старый пердун Коэн-варвар, простоковатый констебль Моркоу, курильщик капитан Ваймс, омерзительный констебль Шноби Шнобс, любитель сосисок Себя-Режу-Без-Ножа Достабль,
-				предпреимчевый Мокриц фон Лимпвиг,- и я могу продолжать и продолжать. Его книги легко читаются, у них интригуещее завязка и неожиданная развязка.
-				Они забавны и держат читателя в легкой атмосфере абсурда и чем-то напоминают Монти Пайтона. 
-				Терри Пратчетт создал оригинальный мир, которую вы запомните.   
-			</p>
-
-		</div>
-
-		<div class="dnd">
-			<center><p><b><h1> D&D! </h1></b></center>
-				<div class="container-card">
-			    	<div class="carda">
-			    		<div class="card-item">
-			    		 	<img src="../images\dnd-1.jpg" align="justify"  class="img-fluid" alt="Responsive image">
-			    		</div>
-			    	</div>
-    			</div>
-			 <p align="justify" style="font-family: Times New Roman">
-				 Настольно-ролевые игры. Игра, в которой ты можешь быть Мастером, что заправляет всей игрой. 
-				 А Dungron and Dragons - знаменитое ролевая система. 
-				 В целом, для игры каждый из игроков должен иметь (и прочитать. И осознать!) "Руководство игрока" (Players Handbook, PHP, Пыха) и набор кубиков, 
-				 а ДМ - ещё и "Руководство ДМ-а" (Dungeon Master Guide, DMG) и Энциклопедией Монстров (Monster Manual, Монстрятник - содержит описания монстров в терминах игровой системы). 
-				 Далее к этому набору литературы могут добавляться комплиты - расширеные описания рас и классов, тома дополнительных правил, умений или заклинаний, 
-				 сеттинги - подробные описания пригодных для приключений миров, модули - подробные описания отдельных разыгрываемых приключений, обрывки страниц из ролевых журналов, 
-				 Players Options, Net rules, Munchkin Handbook и фиг знает что ещё. В самом нищебродском варианте, игроки могут не иметь ничего кроме доверия к ДМ-у, 
-				 все броски кубиков и объяснения ситуаций тяжелым грузом лягут на последнего.
-				 Теперь о кубиках… Что это! Это кубики? Что-то тут не в порядке.
-				 Кубики D&D, они же дайсы, служат для моделирования случайных ситуаций и воссоздания эффектов корейского рандома,из-за чего являются объектом либо НЕНАВИСТИ, либо фетиша. В то время как обычный кубик имеет 6 граней, набор дайсов для игры в D&D состоит из 4, 6, 8, 10, 12 и 20-гранников.
-				 Гейм-мастер является, собственно, координатором игры, придумывает сюжет и реагирует на действия игрока. Фишка в том, что за любым заявленным действием игрока 
-				 следует и его [адекватная] реакция на ситуацию, что кардинально отличает настолки от компьютерных игр, где если заложено, что в замок можно залезть по единственной веревке - все, иные идеи и действия игра просто не поймёт. Также на основе настольных игр родился мем паладин и газебо.
-				 <em>В ролях:
-				Эрик — паладин <br>
-				Эд — Dungeon Master <br>
-				Газебо — Газебо (оно же мансарда, смотровая площадка, навес etc)<br>
-
-				ED:	Ты видишь сад, а в саду стоит газебо.<br>
-				ERIC: Газебо? Какого оно цвета?<br>
-				ED:	Хм, белого.<br>
-				ERIC: Далеко до него?<br>
-				ED:	Метров пятьдесят.<br>
-				ERIC: Большое?<br>
-				ED:	Нуу метров 10 на 5.<br>
-				ERIC: Я использую меч, чтобы определить добро в нем!<br>
-				ED:	Бесполезно, Эрик. Это газебо.<br>
-				ERIC: Ээ я зову его.<br>
-				ED:	Оно не отвечает. Это газебо.<br>
-				ERIC: Убираю меч, вытаскиваю лук и стрелы! Оно как-то реагирует?<br>
-				ED:	Нет, это газебо.<br>
-				ERIC: Стреляю из лука! И чо там?<br>
-				ED:	Там газебо, а из него торчит стрела.<br>
-				ERIC: Оно ранено?<br>
-				ED:	НЕТ, ЭТО ГАЗЕБО!<br>
-				ERIC: Но это была стрела!<br>
-				ED:	Дружище, если ты хочешь навредить газебе, надо попробовать порубать его топором, или сжечь. Только зачем? Это газебо, газебо!<br>
-				ERIC: У меня нет топора и огненной магии. Я убегаю.<br>
-				ED:	Нет. Уже поздно. Ты разбудил Газебо. Оно ловит и съедает тебя.<br>
-				ERIC: Ну, я сейчас накидаю огненного мага. Он отомстит за моего паладина.<br>
-			</p>
-		</div>
-		<div class="bebey">
-			<center><p><b><h1> Бэбэй </h1></b></center>
-			<div class="container-card">
-		    	<div class="carda">
-		    		<div class="card-item">
-		    		 	<img src="../images\bebey.jpg" align="justify"  class="img-fluid" alt="Responsive image">
-		    		</div>
-		    	</div>
-			</div>
-			<p>
-				Бэбэй, Бубуй, Бобой, Бабай, Баурысак. Его зовут многими именами. Бэбэй - гигант мыслей, отец русской демократии, предводитель канала на ютубе и вообще хороший парень. Известен многими своей рубликой "кратко про". Настоящий представитель игровой журналистки в СНГ, который доказал, что прохождение трилогии сталкера повышает мозговую активность.  
+			Существуют 3 трилогии Звездных Войн : Оригинал, приквел и сиквел. И если существование сиквелов, можно забыть, как страшный сон, то приквелы имеют важную роль в трилогиях. Этакий Джекилл и Хайд в в звездных воинах.  
 			</p>
 		</div>
 
 		<div class="homestuck">
 			<center><b><h1> <a href="https://www.mspaintadventures.ru">HOMESTUCK</a> </h1></b></center>
-			 <center><img src="../images\homestuck-1.gif" ></center>
+			 <center><img src="images\homestuck-1.gif" ></center>
 			 <p>
 			  Охо-хо-хо! Let me tell you about <a href="https://www.mspaintadventures.ru"> HOMESTUCK</a>! 
 			  Если честно, <a href="https://www.mspaintadventures.ru"> HOMESTUCK</a>- это вещь, которую трудно обьяснить словами и которую нужно подробно разобрать для полного понимания. 
@@ -187,7 +74,7 @@
 			  Уже понимаете, что тут всё лихо закручено. И это всё один человек - Эндрю Хасси. Парень делал веб-комикс 6 лет. В нём 8000 страниц.
 			  Вот его собственный краткий пересказ о первых четырех актах, в которых всего шесть(БЕГИТЕ, ГЛУПЦЫ!). <br>
 			  <em><b><q>
-			  <a href="https://www.mspaintadventures.ru"> HOMESTUCK</a> начался 13-го апреля 2009 года, с 13-го дня рождения нашего главного героя и будущего паренька-вьюрка, Джона Эгберта. Тремя днями ранее он должен был получить по почте Бету Sburb, но она задерживалась. Пришла она позже в тот же день, и после преодоления целого набора домашних напастей, он заполучил игру, равно как и посылку с подарком на день рождения от своего интернет-друга, Дейва Страйдера.
+			  <a href="https://www.mspaintadventures.ru"> HOMSTUCK</a> начался 13-го апреля 2009 года, с 13-го дня рождения нашего главного героя и будущего паренька-вьюрка, Джона Эгберта. Тремя днями ранее он должен был получить по почте Бету Sburb, но она задерживалась. Пришла она позже в тот же день, и после преодоления целого набора домашних напастей, он заполучил игру, равно как и посылку с подарком на день рождения от своего интернет-друга, Дейва Страйдера.
 			  
 			  Вскоре, Джон установил подключение в игре со своим другим другом, Роуз Лалонд, которая целыми днями приставала к нему, прося поиграть с ней, после того, как она потерпела неудачу, пытаясь уговорить на это Дейва. В результате подключения Роуз смогла манипулировать обстановкой в доме Джона, двигать его мебель с помощью курсора и изменять форму его комнаты. Однако, Джон не мог этого делать с обстановкой дома Роуз. Он установил клиентскую копию беты, а для этого требовалась сервер-копия игры.
 
@@ -369,15 +256,11 @@
 
 			  А потом я начал работать над Актом 5.
 			  
-			  </q></b>
+			  </q></b></em>
 			 </p>
 			 <hr>
 		</div>
 	</div>
-	<script src="../scripts/main.js"></script>
-
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="scripts/main.js"></script>
 </body>
 </html>
